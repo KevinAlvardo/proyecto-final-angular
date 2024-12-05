@@ -1,1 +1,19 @@
-<p>detalle works!</p>
+<!-- src/app/reservas/detalle/detalle.component.html -->
+<div class="reserva-detalle">
+    <h2>Detalles del vehículo</h2>
+    <p>Vehículo ID: {{ vehiculoId }}</p>
+    <p>Estado: {{ reserva.estado }}</p>
+  
+    <h3>Realizar reserva</h3>
+    <label for="fechaInicio">Fecha de inicio:</label>
+    <input id="fechaInicio" [(ngModel)]="reserva.fechaInicio" type="date" />
+  
+    <label for="fechaFin">Fecha de fin:</label>
+    <input id="fechaFin" [(ngModel)]="reserva.fechaFin" type="date" />
+  
+    <label for="cliente">Nombre del cliente:</label>
+    <input id="cliente" [(ngModel)]="reserva.cliente" type="text" />
+  
+    <button (click)="reservar()">Confirmar Reserva</button>
+  </div>
+  
